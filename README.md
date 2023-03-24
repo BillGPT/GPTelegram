@@ -3,3 +3,15 @@ Introducing a Rust-based ChatGPT-Telegram bot integration that delivers seamless
 
 # Demo
 ![image](https://github.com/RevAtN/GPTelegram/blob/main/demo.gif)
+
+# Run
+```
+export OPENAI_API_KEY=sk
+export TELOXIDE_TOKEN=
+
+cargo run
+```
+# TODO
+
+- [ ] More error handling
+- [x] Streaming Output on TG Bot
