@@ -6,12 +6,14 @@ Introducing a Rust-based ChatGPT-Telegram bot integration that delivers seamless
 
 # Run
 ```
-export OPENAI_API_KEY=sk
-export TELOXIDE_TOKEN=
+export OPENAI_API_KEY=sk-
+export TELOXIDE_TOKEN=123:abc
 
 cargo run
 ```
 # TODO
 
-- [ ] More error handling
+- [ ] More Error Handling
+- [ ] Multiple Users
+- [ ] Long Term Chat
 - [x] Streaming Output on TG Bot
