@@ -2,8 +2,23 @@ use crate::gpt;
 use teloxide::prelude::*;
 use teloxide::types::{ChatId, Message};
 use teloxide::types::ChatAction;
+use teloxide::types::UserId;
+use std::env;
+
 
 pub async fn init_telegram_bot(bot: Bot) {
+    let allowed_user_id: UserId = UserId(
+        env::var("ALLOWED_USER_ID")
+            .unwrap()
+            .parse()
+            .expect("ALLOWED_USER_ID must be a valid integer"),
+    );
+
+    if msg.from().is_none() || msg.from().unwrap().id != allowed_user_id {
+        // Ignore messages from users with a different ID
+        return;
+    }
+
     teloxide::repl(bot, |bot: Bot, msg: Message| {
         async move {
             if msg.text().is_some() {
