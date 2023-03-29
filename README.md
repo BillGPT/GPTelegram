@@ -8,6 +8,7 @@ Introducing a Rust-based ChatGPT-Telegram bot integration that delivers seamless
 ```
 export OPENAI_API_KEY=sk-
 export TELOXIDE_TOKEN=123:abc
+export ALLOWED_USER_ID=123
 
 cargo run
 ```
