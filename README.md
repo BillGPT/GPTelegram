@@ -26,8 +26,8 @@ cargo run
 
 # TODO
 
-- [ ] More Error Handling
-- [ ] User management
+- [x] More Error Handling
+- [x] User management
 - [ ] Add payment function
 - [ ] Multiple Users
 - [ ] Long Term Chat
