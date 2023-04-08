@@ -1,10 +1,8 @@
 // v0.1.0 Refactor into multiple files
-mod gpt;
-mod telegram;
-
+use GPTelegram::handle_message;
+use pretty_env_logger;
 use teloxide::prelude::*;
-use std::env;
-use tokio;
+use teloxide::types::ChatAction;
 
 #[tokio::main]
 async fn main() {
@@ -13,5 +11,13 @@ async fn main() {
 
     let bot = Bot::from_env();
 
-    telegram::init_telegram_bot(bot).await;
+    teloxide::repl(bot, |bot: Bot, msg: Message| {
+        async move {
+            if msg.text().is_some() {
+                handle_message(bot, msg).await;
+            }
+            ResponseResult::<()>::Ok(())
+        }
+    })
+    .await;
 }
