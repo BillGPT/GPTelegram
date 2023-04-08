@@ -4,14 +4,26 @@ Introducing a Rust-based ChatGPT-Telegram bot integration that delivers seamless
 # Demo
 ![image](https://github.com/RevAtN/GPTelegram/blob/main/demo.gif)
 
-# Run(Mac/Linux)
+# Run
+
+## Mac/Linux
 ```
-export OPENAI_API_KEY=sk-
-export TELOXIDE_TOKEN=123:abc
-export ALLOWED_USER_ID=123
+export OPENAI_API_KEY=sk-...
+export TELOXIDE_TOKEN=123...:abc...
+export ALLOWED_USER_ID=123...
 
 cargo run
 ```
+## Win(space is needed)
+```
+$Env:OPENAI_API_KEY = "sk-..."
+$Env:TELOXIDE_TOKEN = "123...:abc..."
+$Env:ALLOWED_USER_ID = "123..."
+
+cargo run
+```
+
+
 # TODO
 
 - [ ] More Error Handling
