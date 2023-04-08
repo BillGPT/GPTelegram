@@ -26,9 +26,9 @@ cargo run
 
 # TODO
 
-- [x] More Error Handling
-- [x] User management
 - [ ] Add payment function
 - [ ] Multiple Users
 - [ ] Long Term Chat
+- [x] More Error Handling
+- [x] User management
 - [x] Streaming Output on TG Bot
