@@ -71,7 +71,7 @@ pub async fn fetch_chat_gpt_output(
                                     {
                                         if let Some(content_str) = content.as_str() {
                                             //println!("output: {}", content_str);
-                                            let content_str = content_str.trim_start_matches('\n');
+                                            //let content_str = content_str.trim_start_matches('\n');
                                             if content_str.trim().is_empty() {
                                                 // Skip this iteration if the content_str only contains whitespace characters
                                                 continue;
